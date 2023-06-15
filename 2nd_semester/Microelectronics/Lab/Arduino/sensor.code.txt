@@ -1,0 +1,45 @@
+int pot = 0;  
+int pot_map = 0; 
+int i = 1;  
+void setup() 
+{   
+pinMode(A0, INPUT);   
+pinMode(7,INPUT);   
+pinMode(9, OUTPUT);   
+pinMode(13,OUTPUT);   
+pinMode(10,OUTPUT);   
+Serial.begin(9600);  
+}  
+void loop() 
+{      
+if (digitalRead(7)==HIGH)
+{          
+delay(50);       
+i++;     
+}       
+if (i%2==0)
+{     
+digitalWrite(13,HIGH);         
+pot= analogRead(A0);   
+pot_map = map(pot, 0, 1023, 0, 255);   
+if (analogRead(A0)<500)     
+digitalWrite(9,HIGH);     
+else
+{     
+digitalWrite(10,HIGH);   
+Serial.print("sensor = ");   
+Serial.print(pot);   
+Serial.print("\t output = ");   
+Serial.println(pot_map);   
+delay(1000);     
+digitalWrite(9,LOW);       
+digitalWrite(10,LOW);
+}    
+}   
+if (i%2!=0) 
+{        
+digitalWrite(13,LOW);     
+digitalWrite(10,LOW);     
+digitalWrite(9,LOW);   
+}   	 
+}

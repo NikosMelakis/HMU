@@ -1,0 +1,50 @@
+int Pot;
+int Button;
+
+void setup()
+{
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(2, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  if (digitalRead(2)==HIGH)
+  {
+    Button=1;
+    digitalWrite(7,HIGH);
+    delay(200);
+  }
+   if ((digitalRead(2)==HIGH)&&(Button==1))
+   {
+    Button=0;
+    digitalWrite(7,LOW);
+    delay(200);
+   }
+ Pot=analogRead(A0);
+
+    if ((Button==1)&&(Pot>500))
+    {
+     digitalWrite(8,HIGH);
+     digitalWrite(9,LOW);
+     delay(200);
+    }
+  
+    if ((Button==1)&&(Pot<500))
+    {
+     digitalWrite(9,HIGH);
+     digitalWrite(8,LOW);
+     delay(200);
+    }
+
+  if (Button==0){
+    digitalWrite(9,LOW);
+    digitalWrite(8,LOW);
+    delay(200);
+  }
+  Serial.println(Pot);
+  delay(100);
+}

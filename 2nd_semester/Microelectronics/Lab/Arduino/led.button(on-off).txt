@@ -1,0 +1,30 @@
+int buttonState = LOW;
+void setup() {
+pinMode(13, OUTPUT);
+pinMode(7, INPUT);
+Serial.begin(9600);
+}
+
+void loop() {
+if (digitalRead(7) == HIGH)
+{
+if (buttonState == HIGH)
+{
+buttonState = LOW;
+Serial.println("button pressed");
+Serial.println("led turns off");
+}
+else
+{
+buttonState = HIGH;
+Serial.println("button pressed");
+Serial.println("led turns on");
+}
+digitalWrite(13, buttonState);
+while(digitalRead(7))
+{
+digitalRead(7);
+}
+delay(50);
+}
+}

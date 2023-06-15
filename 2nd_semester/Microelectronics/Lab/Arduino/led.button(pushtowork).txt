@@ -1,0 +1,24 @@
+int pot;
+int potmap;
+void setup()
+{
+pinMode(11,OUTPUT);
+pinMode(7,INPUT)
+Serial.begin(9600);
+}
+void loop()
+{
+if(digitalRead(7) == HIGH)
+{
+pot=analogRead(A0);
+potmap=map(pot,0,1023,0,255);
+analogWrite(11,potmap);
+Serial.println(pot*0.00488);
+Serial.println(potmap/2.55);
+}
+else
+{
+analogWrite(11,LOW);
+}
+delay(50);
+}
