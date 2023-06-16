@@ -1,0 +1,393 @@
+/* whole html page */
+html {
+  scroll-behavior: smooth;
+  transition: 3s;
+}
+
+.fixed-top {
+  transition: 3s;
+}
+
+.logo a {
+  color: #539ce0;
+}
+
+nav {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+
+/* header */
+
+.header {
+  background-image: url("../assets/images/homeBackground.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.description {
+  left: 50%;
+  position: absolute;
+  top: 45%;
+  transform: translate(-50%, -55%);
+  text-align: center;
+}
+
+.description h1 {
+  color: #fff;
+}
+
+.description p {
+  color: #fff;
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+.description button {
+  border: 1px solid #539ce0;
+  background: #539ce0;
+  border-radius: 6px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.description button:hover {
+  border: 1px solid #539ce0;
+  background: transparent;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#newsBtn {
+  font-size: 18px;
+  border: 1px solid #539ce0;
+  background: #539ce0;
+  border-radius: 6px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#newsBtn:hover {
+  border: 1px solid #539ce0;
+  background: transparent;
+  color: #539ce0;
+  transition: 0.5s;
+}
+
+
+
+/* footer  */
+
+footer {
+  background-color: rgb(246, 246, 246);
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+.b-example-vr {
+  flex-shrink: 0;
+  width: 1.5rem;
+  height: 100vh;
+}
+
+.bi {
+  vertical-align: -0.125em;
+  fill: currentColor;
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+#newsletter {
+  margin-right: 8px;
+}
+
+/* icons */
+
+#socialIcons i {
+  color: #539ce0;
+  font-size: 20px;
+  margin: 5px 5px;
+  padding: 5px 5px;
+  justify-content: space-between;
+}
+
+.travelPacks {
+  margin: 5%;
+}
+
+.travelPacks h4 {
+  text-align: center;
+}
+
+.card {
+  transition: transform 1s ease;
+  background-color: rgb(246, 246, 246);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-img-top {
+  width: 100%;
+}
+
+.list-group-item {
+  font-weight: bold;
+}
+
+#aButton {
+  border: 1px solid #539ce0;
+  background: #539ce0;
+  border-radius: 6px;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#aButton:hover {
+  border: 1px solid #539ce0;
+  background: transparent;
+  color: #fff;
+  transition: 0.5s;
+}
+
+
+
+#travelIcons {
+  font-style: normal;
+  font-size: 22px;
+  text-decoration: none;
+  color: #539ce0;
+}
+
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: 1px solid #539ce0;
+  background: #539ce0;
+  color: #fff;
+  transition: 0.5s;
+}
+
+#btn-back-to-top:hover {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  border: 1px solid #539ce0;
+  color: #539ce0;
+  background: transparent;
+  transition: 0.5s;
+}
+
+#btn-back-to-top i {
+  font-size: 1.5em;
+}
+
+#card-footer {
+  background-color: white;
+}
+
+#card {
+  margin: 5% 10% 5% 10%;
+}
+
+.cont{
+    text-align: center;
+    margin-bottom:5%;
+}
+
+.carousel .carousel-indicators li,
+.carousel-control-next span,
+.carousel-control-prev span {
+  background-color: #539ce0;
+  color: #539ce0;
+}
+
+.carousel .carousel-indicators li.active {
+  background-color: rgb(22, 85, 180);
+}
+
+#carousel-control {
+  color: #539ce0;
+  font-size: 50px;
+}
+
+#carousel-control-next,
+#carousel-control-prev {
+  width: 5%;
+}
+
+#contact-icons {
+  font-size: 25px;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+/* contact */
+
+.contact-us {
+  padding: 70px;
+  width: 80%;
+  margin: auto;
+}
+
+.contact-col {
+  flex-basis: 48%;
+  margin-bottom: 30px;
+}
+
+.contact-col input,
+textarea {
+  border-radius: 8px;
+}
+
+
+.contact-col div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.contact-col .fa {
+  font-size: 35px;
+  color: #539ce0;
+  margin: 10px;
+}
+
+#map-icon {
+  font-size: 45px;
+}
+
+.contact-col div p {
+  padding: 0;
+}
+
+.contact-col a {
+  color: #000;
+  text-decoration: none;
+}
+
+.contact-col div h5 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #000;
+  font-weight: 400;
+}
+
+.sent p {
+  color: #000;
+  border-radius: 10px;
+  padding: 20px 15px;
+}
+
+.contact-col input,
+.contact-col textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 17px;
+  outline: none;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+.form-btn {
+  display: inline-block;
+  color: #000;
+  border: 1px solid #000;
+  padding: 12px 34px;
+  font-size: 13px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.form-btn:hover {
+  color: #fff;
+  background: #000;
+  border: 1px solid #c8c5d6;
+  transition: 1s;
+}
+
+#contact-head4 {
+  margin: 2%;
+  text-align: center;
+}
+
+@media (max-width: 770px) {
+  .contact-us {
+    padding: 70px;
+    width: auto;
+  }
+
+  .contact-col div h5 {
+    font-size: 15px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}
+
+
+/* responsive */
+@media only screen and (max-width: 575px) {
+  .card {
+    margin: 10%;
+  }
+}
+
+
+.booked{
+    width: 60%;
+}
