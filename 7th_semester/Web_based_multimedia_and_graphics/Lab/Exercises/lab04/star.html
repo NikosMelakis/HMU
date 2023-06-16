@@ -1,0 +1,51 @@
+<!-- Melakis Nikolaos TP4726 
+4h ergasia ergasthriou -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 04 | TP4726</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+        background-color: #f1f1f1;
+      }
+      body {
+        margin: 5px 5px;
+        padding: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="600" height="600"></canvas>
+  </body>
+  <script type="text/javascript">
+    let canvas = document.querySelector("canvas");
+    let ctx = canvas.getContext("2d");
+
+    // function to draw star with a pattern rotation of pi/5
+    function star(w) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.moveTo(0, -w);
+      ctx.rotate(Math.PI / 5);
+      ctx.lineTo(0, w);
+      ctx.rotate(Math.PI / 5);
+      ctx.lineTo(0, -w);
+      ctx.rotate(Math.PI / 5);
+      ctx.lineTo(0, w);
+      ctx.rotate(Math.PI / 5);
+      ctx.lineTo(0, -w);
+      ctx.closePath();
+      ctx.strokeStyle = "black"; //make star color black
+      ctx.stroke();
+    }
+
+    let w = 200;
+    ctx.translate(ctx.canvas.width / 2, ctx.canvas.height / 2); //align star in the center of the canvas
+    star(w);
+  </script>
+</html>
