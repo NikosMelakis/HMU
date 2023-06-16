@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Computer
+comment1.params=brand\ cpu
+comment1.target=Computer(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=java.lang.String\ toString()
+comment3.params=aDisk
+comment3.target=void\ addDisk(Disk)
+comment4.params=
+comment4.target=void\ printDisk()
+comment5.params=
+comment5.target=double\ totalDiskCapacity()
+comment6.params=memory
+comment6.target=void\ setMemory(int)
+numComments=7
