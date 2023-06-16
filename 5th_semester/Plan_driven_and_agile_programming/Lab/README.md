@@ -1,1 +1,1 @@
-# Codes of this class are locked
+# Codes of this class are locked!
