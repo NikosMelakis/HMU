@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melakis Nikolaos TP4726</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+
+      body {
+        margin: 5px 5px;
+        padding: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+
+      let h = 500;
+      let w = 500;
+
+      canvas.width = w; //canvas width
+      canvas.height = h; //canvas height
+
+      let x = 0;
+      let y = canvas.height - h;
+      let v = 300;
+
+      //   creating the outer stroke circle
+      ctx.beginPath();
+      ctx.lineWidth = 5; //giving the circle a 5px border
+      ctx.fillStyle = "green"; //inner color
+      ctx.strokeStyle = "red"; //outer color
+      r = 10;
+      ctx.arc(canvas.width / 2, canvas.height / 2, r, 0, 2 * Math.PI); //creating the circle
+      ctx.fill(); //to get grenn color
+      ctx.stroke(); //to get the red color
+      ctx.closePath();
+    </script>
+  </body>
+</html>

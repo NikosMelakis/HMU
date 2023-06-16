@@ -1,0 +1,157 @@
+ΔΙΑΔΙΚΤΥΑΚΑ ΠΟΛΥΜΕΣΑ ΚΑΙ ΓΡΑΦΙΚΑ 
+ΠΡΟΟΔΟΣ ΣΤΗ ΤΑΞΗ 2022
+
+
+Βασικά είδη εικόνας για προγραμματισμό σε web
+
+	Τα πιο συνηθισμένα formats εικόνων είναι JPEG και PNG τα οποία είναι binary
+	formats και επομένως δεν “βολεύει” να ενσωματωθούν μέσα στο αρχείο HTML που
+	είναι κείμενο.
+	Υπάρχουν και τα λεγόμενα vector graphics στη “γλώσσα” SVG που είναι κείμενο
+	(μοιάζει με HTML) που μπορούν να ενσωματωθούν απευθείας στο αρχείο HTML
+	(θα τα δούμε παρακάτω)
+
+
+-----------------------------------------------------------------------------------------------
+
+
+Κώδικα για ένα button που να αλλάζει χρώμα όταν το πατάει ο χρήστης
+	
+	Javascript
+	const btn = document.getElementById('btn');
+
+		btn.addEventListener('click', function onClick() {
+  	btn.style.backgroundColor = 'salmon';
+  	btn.style.color = 'white';
+	});
+	
+	
+	CSS
+	.button{
+
+	border: none;
+
+	padding: 15px;
+
+	color: #000;
+
+	background-color: #fff;
+
+	border-radius: 15px;
+
+	}
+
+	.button:active{
+
+	color: #fff;
+
+	background-color: #000;
+	}
+
+
+-----------------------------------------------------------------------------------------------
+
+
+
+Φτιάξτε ένα html canvas 500x500 και στο κέντρο του να υπάρχει ένας κύκλος με ακτίνα r=100 με εξωτερικό χρώμα κόκκινο κσι εσωτερικό χρώμα μαύρο.
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melakis Nikolaos TP4726</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+
+      body {
+        margin: 5px 5px;
+        padding: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+
+      let h = 500;
+      let w = 500;
+
+      canvas.width = 500;
+      canvas.height = 500;
+
+      let x = 0;
+      let y = canvas.height - h;
+      let v = 300;
+
+      //   creating the outer stroke circle
+      ctx.beginPath();
+      ctx.lineWidth = 10;
+      ctx.fillStyle = "#333";
+      ctx.strokeStyle = "#ff0000";
+      r = 100;
+      ctx.arc(canvas.width / 2, canvas.height / 2, r, 0, 2 * Math.PI);
+      ctx.fill();
+      ctx.stroke();
+      ctx.closePath();
+    </script>
+  </body>
+</html>
+
+
+
+-----------------------------------------------------------------------------------------------
+
+
+Την σημαία τη πρώτη ελληνικη σημαία με τέσσαρα μπλε box και λευκό σταυρό στη μέση
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melakis Nikolaos</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+
+      body {
+        margin: 5px 5px;
+        padding: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+
+      let h = 400;
+      let w = 600;
+
+      let x = 270;
+      let y = 70;
+      let z = 30;
+
+      canvas.height = h;
+      canvas.width = w;
+
+      ctx.fillStyle = "blue";
+      ctx.fillRect(0, 0, x, h / 2 - z);
+      ctx.fillRect(h - y, 0, x, h / 2 - z);
+      ctx.fillRect(0, w / 2 - y, x, h / 2 - z);
+      ctx.fillRect(h - y, w / 2 - y, x, h / 2 - z);
+    </script>
+  </body>
+</html>
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melakis Nikolaos</title>
+    <style type="text/css">
+      canvas {
+        border: 1px solid #000;
+      }
+
+      body {
+        margin: 5px 5px;
+        padding: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="myCanvas"></canvas>
+    <script>
+      let canvas = document.getElementById("myCanvas");
+      let ctx = canvas.getContext("2d");
+
+      let h = 400;
+      let w = 600;
+
+      let x = 80; //value to left in between rectangles so we get 160px spacing for each side
+
+      canvas.height = 2 * h; //making the height 800px
+      canvas.width = 2 * w; //making width 1200px
+
+      ctx.fillStyle = "blue"; //rect color
+      ctx.fillRect(0, 0, canvas.width / 2 - x, canvas.height / 2 - x); //top left
+      ctx.fillRect(w + x, 0, canvas.width / 2 - x, canvas.height / 2 - x); //top right
+      ctx.fillRect(0, h + x, canvas.width / 2 - x, canvas.height / 2 - x); //bottom left
+      ctx.fillRect(w + x, h + x, canvas.width / 2 - x, canvas.height / 2 - x); //bottom right
+    </script>
+  </body>
+</html>
