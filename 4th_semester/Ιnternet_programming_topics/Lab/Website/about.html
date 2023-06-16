@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="file:///C:/Users/Nikos%20Melakis/Desktop/home.html" class="w3-bar-item w3-button"><b>HOME PAGE</b> 
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="file:///C:/Users/Nikos%20Melakis/Desktop/log-in.html" class="w3-bar-item w3-button">Log In</a>
+      <a href="file:///C:/Users/Nikos%20Melakis/Desktop/about.html" class="w3-bar-item w3-button">About</a>
+      <a href="file:///C:/Users/Nikos%20Melakis/Desktop/make%20a%20reservation.html" class="w3-bar-item w3-button">Make A Reservation</a>
+      <a href="file:///C:/Users/Nikos%20Melakis/Desktop/contact.html" class="w3-bar-item w3-button">Contact</a>
+      <a href="#announcements" class="w3-bar-item w3-button">Announcements</a>
+    </div>
+  </div>
+</div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>
+This 5-star beachfront hotel in Chania, in beautiful Crete welcomes you to experience all the luxuries of a magnificent landscape overlooking the endless blue of the Aegean Sea. Relax in some of the finest sea-view rooms, taste delicious local delicacies, lift the adrenaline with a variety of sports activities and entertainment options and let your children play safely and swim in the specially designed pools.
+Rejuvenate your questions in the romantic atmosphere of the landscape and awaken your senses in the tranquil atmosphere of the spa. So, when you decide to travel and start your search for the best accommodation in Chania, Crete, there is definitely no reason to delay it as the Luxury Hotel has already provided you with everything you've dreamed of for an unforgettable summer.
+</p>
+
+<head>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+</head>
+
+<body>
+
+
+<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="pic1.jpg" style="width:100%">
+  <img class="mySlides" src="pic7.jpg" style="width:100%">
+  <img class="mySlides" src="pic8.jpg" style="width:100%">
+  <img class="mySlides" src="pic9.jpg" style="width:100%">
+  <img class="mySlides" src="pic10.jpg" style="width:100%">
+  <img class="mySlides" src="map.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<style>
+        header nav ul{
+            list-style-type: none;
+        }
+
+        header nav ul li{
+            display: inline;
+        }
+
+        header nav{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        img.logo{
+            height:6em;
+        }
+
+        header nav a{
+            text-decoration: none;
+            color: red;
+            font-weight: 700;
+            padding: 3px 5px;
+            width: 20em;
+        }
+
+        header nav a:hover{
+            border-bottom: 4px solid red;
+        }
+
+        div.photos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            /* gap: 10px; <--> mporei na bei anti tou margin sto card */            
+        }
+        
+        div.card{
+            width: 30%;
+            min-width: 200px;
+            margin: 5px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        div.card h4{
+            text-align: center;
+        }
+
+        div.card:hover{
+            -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+            box-shadow: 5px 5px 15px 5px #000000;
+
+        }
+        p{
+            text-align: right;
+        }
+        .card img{
+            width: 100%
+        }
+
+
+    </style>
